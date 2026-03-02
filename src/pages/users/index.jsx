@@ -6,7 +6,7 @@ import { usersList } from './usersList';
 function UsersPage() {
   return (
     <div>
-      <h2>Список пользователей</h2>
+      <h1>Страница списка пользователей</h1>
       <ul>
         {usersList.map((user) => (
           <li key={user.id}>

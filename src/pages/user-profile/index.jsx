@@ -8,11 +8,17 @@ function UserProfilePage() {
 
   const user = usersList.find((user) => user.id === Number(userId));
 
-  if (!user) return <h2>Пользователь не найден</h2>;
+  if (!user)
+    return (
+      <>
+        <h1>Страница профиля пользователя</h1>
+        <p>Пользователь не найден</p>
+      </>
+    );
 
   return (
     <div>
-      <h2>Профиль пользователя</h2>
+      <h1>Страница профиля пользователя</h1>
       <p>
         <strong>Имя:</strong> {user.name}
       </p>
