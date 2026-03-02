@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import HomePage from './pages/home';
 import NotFoundPage from './pages/not-found';
@@ -7,6 +7,9 @@ import UsersPage from './pages/users';
 import UserProfilePage from './pages/user-profile';
 
 function App() {
+  const loacation = useLocation();
+  // console.log(loacation);
+
   return (
     <>
       <main>
@@ -15,6 +18,7 @@ function App() {
         <section>
           <div className="container">
             <h2>Задача 1: Роутинг хук useParams()</h2>
+            <h3>Current URL: {location.pathname}</h3>
             <Nav />
 
             <Routes>
